@@ -35,8 +35,30 @@ body {
     width: 100%;
 }
 .container {
-    max-width: 61.46vw;
-    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    border-radius: 20px;
+    & button {
+        z-index: -10;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        padding: 1px;
+        border-radius: 15px;
+        background: linear-gradient(120deg , #9c20aa, #fb3570);
+                mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                mask-composite: exclude;
+      
+      }
 }
 .button {
     font-family: Raleway;
